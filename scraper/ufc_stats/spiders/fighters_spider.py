@@ -4,7 +4,7 @@ from ..items import FighterItem
 class FightersSpider(scrapy.Spider):
     name = "fighters"
     allowed_domains = ["ufcstats.com"]
-    start_urls = ["http://ufcstats.com/statistics/fighters?char=a&page=all"]
+    start_urls = [f'http://www.fightmetric.com/statistics/fighters?char={chr(c)}&page=all' for c in range(ord('a'), ord('z') + 1)]
 
     def parse(self, response):
         # Extract links to individual fighter pages
