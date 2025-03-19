@@ -52,7 +52,10 @@ import csv
 
 class CsvExportPipeline:
     def open_spider(self, spider):
-        self.file = open('fighters_data.csv', mode='w', newline='', encoding='utf-8')
+        if spider.name == 'fighters_spider':
+            self.file = open('fighters_data.csv', mode='w', newline='', encoding='utf-8')
+        elif spider.name == 'fight_spider':
+            self.file = open('fights_data.csv', mode='w', newline='', encoding='utf-8')
         self.writer = None
 
     def close_spider(self, spider):
