@@ -20,3 +20,18 @@ class FighterItem(scrapy.Item):
     takedown_accuracy = scrapy.Field()
     takedown_defense = scrapy.Field()
     submission_avg = scrapy.Field()
+
+class FightItem(scrapy.Item):
+    event_name = scrapy.Field()
+    fighter_1 = scrapy.Field()
+    fighter_2 = scrapy.Field()
+    # kd = scrapy.Field()
+    # strikes = scrapy.Field()
+    # td = scrapy.Field()
+    # sub = scrapy.Field()
+    winner = scrapy.Field()
+    method = scrapy.Field()
+    round_num = scrapy.Field()
+    time = scrapy.Field()
+    
+    
