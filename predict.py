@@ -10,8 +10,8 @@ scaler = joblib.load('scaler.pkl')
 fighters_data = pd.read_csv('./datasets/fighters_data.csv')
 
 # Input: Names of the two fighters
-fighter_1_name = "Nathaniel Wood"
-fighter_2_name = "Morgan Charriere"
+fighter_1_name = "Brandon Moreno"
+fighter_2_name = "Steve Erceg"
 
 # Extract stats for each fighter
 fighter_1 = fighters_data[fighters_data['name'] == fighter_1_name]

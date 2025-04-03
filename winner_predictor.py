@@ -5,6 +5,7 @@ from sklearn.metrics import accuracy_score, classification_report
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 import xgboost as xgb
+from sklearn.neural_network import MLPClassifier
 import joblib
 
 # Load the datasets
@@ -58,7 +59,8 @@ X_test_scaled = scaler.transform(X_test)
 models = {
     "Logistic Regression": LogisticRegression(max_iter=1000),
     "Random Forest": RandomForestClassifier(),
-    "XGBoost": xgb.XGBClassifier(eval_metric='mlogloss')
+    "XGBoost": xgb.XGBClassifier(eval_metric='mlogloss'),
+    "MLP Neural Network": MLPClassifier(hidden_layer_sizes=(100, 50), max_iter=500, activation='relu', solver='adam', random_state=42)
 }
 
 # Store results
