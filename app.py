@@ -1,9 +1,11 @@
 from flask import Flask, render_template, request, jsonify
+from flask_cors import CORS
 import pandas as pd
 import joblib
 import warnings
 
 app = Flask(__name__)
+CORS(app)
 
 # Load the saved model and scaler
 logistic_model = joblib.load('logistic_model.pkl')
