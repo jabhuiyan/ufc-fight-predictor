@@ -33,7 +33,7 @@ The ETL process involves:
 
 - **Transform**: The extracted data undergoes cleaning and preprocessing to ensure consistency and accuracy.​
 
-- **Load**: The transformed data is stored in a structured format within the datasets `directory` for further analysis.
+- **Load**: The transformed data is stored in a structured format within the `datasets` directory for further analysis.
 
 
 ## Data Features
