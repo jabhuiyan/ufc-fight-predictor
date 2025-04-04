@@ -97,7 +97,7 @@ The project utilizes:
 #### Prediction model v1.0
 -------------------------------------------------
 
-##### current model: Logistics Regression
+##### model: Logistics Regression
 
 model accuracy: 66.76%
 
