@@ -6,8 +6,7 @@
 This project leverages machine learning techniques to predict the outcomes of UFC fights.  
 By analyzing fighters' statistics, the model forecasts the likely winner between two competitors. [Website](https://predictufc.netlify.app)
 
-**Models
-**: Logistics Regression, XGBoost, Random Forest, MLP Neural Network
+**Models**: Logistics Regression, XGBoost, Random Forest, MLP Neural Network
 
 ## Installation Instructions
 
