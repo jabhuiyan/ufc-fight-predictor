@@ -94,7 +94,7 @@ The project utilizes:
 
 **Web Scraping**: Spyder
 
-**Libraries**: Pandas, NumPy, Scikit-learn, Matplotlib
+**Libraries**: Pandas, NumPy, Scikit-learn, XGBoost, Matplotlib, Joblib
 
 **Data Analysis**: Tableau, Jupyter Notebook
 
@@ -124,3 +124,5 @@ model was used on UFC Fight Night 254 main card event where it successfully pred
 model accuracy: 70.83%
 
 model features: striking, takedown and submission stats of two fighters
+
+model was used on UFC Fight Night Emmett vs Murphy main card event, where it successfully predicted all but one match. Ode Osbourne won his match despite being predicted to lose by the model.
