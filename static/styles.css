@@ -1,0 +1,160 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: rgba(0, 0, 0, 0.8) url("https://preview.redd.it/3rgl8e670ov51.png?auto=webp&s=b1822d178af7ccc31bda789f56aa2980fadf5d55") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+/* Header */
+header {
+    background: rgb(161, 42, 42);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+}
+
+/* Accuracy and Disclaimer */
+.info {
+    margin: 20px auto;
+    max-width: 600px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.info a {
+    color: red;
+    font-weight: bold;
+}
+
+.info a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.accuracy {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.disclaimer {
+    font-size: 0.9em;
+    color: #e3e3e3;
+}
+
+
+
+/* Prediction Box */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.spell-check {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    color: #ccc;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.prediction-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+.prediction-box input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.vs-text {
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(125, 124, 124);
+}
+
+button {
+    background: black;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+button:hover {
+    background: red;
+}
+
+/* Popup */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    height: 50vh;
+    background: rgb(161, 42, 42);
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/013/743/815/small_2x/colorful-bright-confetti-png.png");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 9999;  /* Ensure it appears above other content */
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+}
+
+/* Text Inside the Popup */
+.popup p {
+    font-size: 1.5em;
+}
+
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background: rgb(161, 42, 42);
+    padding: 10px;
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+}

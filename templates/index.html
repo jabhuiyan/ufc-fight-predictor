@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFC Fight Predictor</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Welcome to UFC Fight Predictor</h1>
+    </header>
+
+    <!-- Model Accuracy Info -->
+    <section class="info">
+        <p class="accuracy">Current accuracy of model: <b>70.83%</b></p>
+        <p class="disclaimer">
+            This means there is a 70.83% chance of the predicted fighter to win. 
+            This does not mean 70.83% of <b>ALL</b> total matches will be predicted accurately. 
+            Please use this website responsibly, I do not recommend or condone any financial activities made based on this website.
+            <br>
+            All data have been scraped from <a href="http://ufcstats.com/statistics/events/completed">UFC Stats</a> to make this prediction model.
+            <br>
+            This project is open source. You can cite, contribute or incorporate either the prediction model or the data scraper from <a href="https://github.com/jabhuiyan/ufc-fight-predictor">here</a>.
+        </p>
+    </section>
+
+    <!-- Prediction Box -->
+    <div class="container">
+        <p class="spell-check">Names should be spelled exactly as UFC Stats have them</p>
+        <div class="prediction-box">
+            <input type="text" id="fighter1" placeholder="Fighter 1">
+            <span class="vs-text">VS</span>
+            <input type="text" id="fighter2" placeholder="Fighter 2">
+            <button id="predict-btn">Predict</button>
+        </div>
+    </div>
+
+    <!-- Prediction Result Pop up -->
+    <div id="popup" class="popup hidden">
+        <p id="prediction-result"></p>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <p>© UFC Predictor 2025 | made by Jubaer</p>
+    </footer>
+
+    <script src="../static/script.js"></script>
+
+</body>
+</html>
