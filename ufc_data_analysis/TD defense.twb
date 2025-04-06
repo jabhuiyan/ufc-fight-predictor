@@ -1,0 +1,592 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20251.25.0313.2002                               -->
+<workbook original-version='18.1' source-build='2025.1.0 (20251.25.0313.2002)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='fighters_data' inline='true' name='federated.1tu6ff91wx2rrx17foa990b5y8nc' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='fighters_data' name='textscan.1cz7rwf1ch6t6s1fbjilq0ngx0ro'>
+            <connection class='textscan' directory='C:/Users/jubaer/Documents/ufc_fight_predictor/datasets' filename='fighters_data.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1cz7rwf1ch6t6s1fbjilq0ngx0ro' name='fighters_data.csv' table='[fighters_data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+            <column datatype='string' name='name' ordinal='0' />
+            <column datatype='real' name='height_cm' ordinal='1' />
+            <column datatype='real' name='weight_kg' ordinal='2' />
+            <column datatype='real' name='reach_cm' ordinal='3' />
+            <column datatype='real' name='strikes_per_min' ordinal='4' />
+            <column datatype='real' name='striking_accuracy' ordinal='5' />
+            <column datatype='real' name='takedown_avg' ordinal='6' />
+            <column datatype='real' name='takedown_accuracy' ordinal='7' />
+            <column datatype='real' name='takedown_defense' ordinal='8' />
+            <column datatype='real' name='submission_avg' ordinal='9' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[fighters_data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_CA&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[fighters_data.csv]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[fighters_data.csv_139A6F69AF6F4B748D4430C5AD8D68B0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>height_cm</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[height_cm]</local-name>
+            <parent-name>[fighters_data.csv]</parent-name>
+            <remote-alias>height_cm</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[fighters_data.csv_139A6F69AF6F4B748D4430C5AD8D68B0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>weight_kg</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[weight_kg]</local-name>
+            <parent-name>[fighters_data.csv]</parent-name>
+            <remote-alias>weight_kg</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[fighters_data.csv_139A6F69AF6F4B748D4430C5AD8D68B0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>reach_cm</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[reach_cm]</local-name>
+            <parent-name>[fighters_data.csv]</parent-name>
+            <remote-alias>reach_cm</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[fighters_data.csv_139A6F69AF6F4B748D4430C5AD8D68B0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>strikes_per_min</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[strikes_per_min]</local-name>
+            <parent-name>[fighters_data.csv]</parent-name>
+            <remote-alias>strikes_per_min</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[fighters_data.csv_139A6F69AF6F4B748D4430C5AD8D68B0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>striking_accuracy</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[striking_accuracy]</local-name>
+            <parent-name>[fighters_data.csv]</parent-name>
+            <remote-alias>striking_accuracy</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[fighters_data.csv_139A6F69AF6F4B748D4430C5AD8D68B0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>takedown_avg</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[takedown_avg]</local-name>
+            <parent-name>[fighters_data.csv]</parent-name>
+            <remote-alias>takedown_avg</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[fighters_data.csv_139A6F69AF6F4B748D4430C5AD8D68B0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>takedown_accuracy</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[takedown_accuracy]</local-name>
+            <parent-name>[fighters_data.csv]</parent-name>
+            <remote-alias>takedown_accuracy</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[fighters_data.csv_139A6F69AF6F4B748D4430C5AD8D68B0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>takedown_defense</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[takedown_defense]</local-name>
+            <parent-name>[fighters_data.csv]</parent-name>
+            <remote-alias>takedown_defense</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[fighters_data.csv_139A6F69AF6F4B748D4430C5AD8D68B0]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>submission_avg</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[submission_avg]</local-name>
+            <parent-name>[fighters_data.csv]</parent-name>
+            <remote-alias>submission_avg</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[fighters_data.csv_139A6F69AF6F4B748D4430C5AD8D68B0]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Takedown Defense (bin)' datatype='integer' name='[Takedown Defense (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='-1' formula='[takedown_defense]' peg='0' size='0.1' />
+      </column>
+      <column caption='fighters_data.csv' datatype='table' name='[__tableau_internal_object_id__].[fighters_data.csv_139A6F69AF6F4B748D4430C5AD8D68B0]' role='measure' type='quantitative' />
+      <column caption='Height Cm' datatype='real' name='[height_cm]' role='measure' type='quantitative' />
+      <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+      <column caption='Reach Cm' datatype='real' name='[reach_cm]' role='measure' type='quantitative' />
+      <column caption='Strikes Per Min' datatype='real' name='[strikes_per_min]' role='measure' type='quantitative' />
+      <column caption='Striking Accuracy' datatype='real' name='[striking_accuracy]' role='measure' type='quantitative' />
+      <column caption='Submission Avg' datatype='real' name='[submission_avg]' role='measure' type='quantitative' />
+      <column caption='Takedown Accuracy' datatype='real' name='[takedown_accuracy]' role='measure' type='quantitative' />
+      <column caption='Takedown Avg' datatype='real' name='[takedown_avg]' role='measure' type='quantitative' />
+      <column caption='Takedown Defense' datatype='real' name='[takedown_defense]' role='measure' type='quantitative' />
+      <column caption='Weight Kg' datatype='real' name='[weight_kg]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/jubaer/AppData/Local/Temp/TableauTemp/#TableauTemp_1uv7to513djv3214mioav1pn2xkw.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='04/06/2025 12:33:53 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>name</remote-alias>
+              <ordinal>0</ordinal>
+              <family>fighters_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4272</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[fighters_data.csv_139A6F69AF6F4B748D4430C5AD8D68B0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>height_cm</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[height_cm]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>height_cm</remote-alias>
+              <ordinal>1</ordinal>
+              <family>fighters_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>23</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[fighters_data.csv_139A6F69AF6F4B748D4430C5AD8D68B0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>weight_kg</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[weight_kg]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>weight_kg</remote-alias>
+              <ordinal>2</ordinal>
+              <family>fighters_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>88</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[fighters_data.csv_139A6F69AF6F4B748D4430C5AD8D68B0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>reach_cm</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[reach_cm]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>reach_cm</remote-alias>
+              <ordinal>3</ordinal>
+              <family>fighters_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>27</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[fighters_data.csv_139A6F69AF6F4B748D4430C5AD8D68B0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>strikes_per_min</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[strikes_per_min]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>strikes_per_min</remote-alias>
+              <ordinal>4</ordinal>
+              <family>fighters_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>627</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[fighters_data.csv_139A6F69AF6F4B748D4430C5AD8D68B0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>striking_accuracy</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[striking_accuracy]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>striking_accuracy</remote-alias>
+              <ordinal>5</ordinal>
+              <family>fighters_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>75</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[fighters_data.csv_139A6F69AF6F4B748D4430C5AD8D68B0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>takedown_avg</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[takedown_avg]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>takedown_avg</remote-alias>
+              <ordinal>6</ordinal>
+              <family>fighters_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>773</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[fighters_data.csv_139A6F69AF6F4B748D4430C5AD8D68B0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>takedown_accuracy</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[takedown_accuracy]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>takedown_accuracy</remote-alias>
+              <ordinal>7</ordinal>
+              <family>fighters_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>83</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[fighters_data.csv_139A6F69AF6F4B748D4430C5AD8D68B0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>takedown_defense</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[takedown_defense]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>takedown_defense</remote-alias>
+              <ordinal>8</ordinal>
+              <family>fighters_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>81</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[fighters_data.csv_139A6F69AF6F4B748D4430C5AD8D68B0]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>submission_avg</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[submission_avg]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>submission_avg</remote-alias>
+              <ordinal>9</ordinal>
+              <family>fighters_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>79</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[fighters_data.csv_139A6F69AF6F4B748D4430C5AD8D68B0]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Canada&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='fighters_data.csv' id='fighters_data.csv_139A6F69AF6F4B748D4430C5AD8D68B0'>
+            <properties context=''>
+              <relation connection='textscan.1cz7rwf1ch6t6s1fbjilq0ngx0ro' name='fighters_data.csv' table='[fighters_data#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_CA' separator=','>
+                  <column datatype='string' name='name' ordinal='0' />
+                  <column datatype='real' name='height_cm' ordinal='1' />
+                  <column datatype='real' name='weight_kg' ordinal='2' />
+                  <column datatype='real' name='reach_cm' ordinal='3' />
+                  <column datatype='real' name='strikes_per_min' ordinal='4' />
+                  <column datatype='real' name='striking_accuracy' ordinal='5' />
+                  <column datatype='real' name='takedown_avg' ordinal='6' />
+                  <column datatype='real' name='takedown_accuracy' ordinal='7' />
+                  <column datatype='real' name='takedown_defense' ordinal='8' />
+                  <column datatype='real' name='submission_avg' ordinal='9' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Distribution of Fighters by TD Defense Percentage</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='fighters_data' name='federated.1tu6ff91wx2rrx17foa990b5y8nc' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1tu6ff91wx2rrx17foa990b5y8nc'>
+            <column caption='Takedown Defense (bin)' datatype='integer' name='[Takedown Defense (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='-1' formula='[takedown_defense]' peg='0' size='0.1' />
+            </column>
+            <column-instance column='[name]' derivation='Count' name='[cnt:name:qk]' pivot='key' type='quantitative' />
+            <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+            <column-instance column='[Takedown Defense (bin)]' derivation='None' name='[none:Takedown Defense (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[name]' derivation='None' name='[none:name:nk]' pivot='key' type='nominal' />
+            <column caption='Takedown Defense' datatype='real' name='[takedown_defense]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1tu6ff91wx2rrx17foa990b5y8nc].[cnt:name:qk]' field-type='quantitative' max='1705' min='-96' range-type='fixed' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.1tu6ff91wx2rrx17foa990b5y8nc].[cnt:name:qk]' scope='rows' value='Number of Fighters' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1tu6ff91wx2rrx17foa990b5y8nc].[none:Takedown Defense (bin):ok]' value='p0.00%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1tu6ff91wx2rrx17foa990b5y8nc].[none:name:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#f28e2b' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1tu6ff91wx2rrx17foa990b5y8nc].[cnt:name:qk]</rows>
+        <cols>[federated.1tu6ff91wx2rrx17foa990b5y8nc].[none:Takedown Defense (bin):ok]</cols>
+        <show-full-range>
+          <column>[federated.1tu6ff91wx2rrx17foa990b5y8nc].[Takedown Defense (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{B9D3D88C-21CD-4CCC-A110-56138874D440}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1tu6ff91wx2rrx17foa990b5y8nc].[none:Takedown Defense (bin):ok]</field>
+            <field>[federated.1tu6ff91wx2rrx17foa990b5y8nc].[none:name:nk]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{029C7259-C774-4F4F-B25A-1C9D849CE667}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
