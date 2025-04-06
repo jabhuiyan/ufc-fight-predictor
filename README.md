@@ -95,6 +95,8 @@ The project utilizes:
 
 **Libraries**: Pandas, NumPy, Scikit-learn, Matplotlib
 
+**Data Analysis**: Tableau, Jupyter Notebook
+
 **Database**: Postgres, NoSQL
 
 **Web Framework**: Flask
