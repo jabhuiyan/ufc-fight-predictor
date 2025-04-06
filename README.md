@@ -59,6 +59,7 @@ The dataset includes the following features for each fighter:
 
 Exploratory data analysis (EDA) is conducted to uncover patterns and relationships within the data.
 Visualizations and statistical summaries help in understanding distributions, identifying outliers, and revealing trends that inform model development.
+[Here](https://github.com/jabhuiyan/ufc-fight-predictor/blob/main/ufc_data_analysis/data_analysis.ipynb) is an example.
 
 
 ## Feature Engineering
