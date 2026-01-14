@@ -3,8 +3,35 @@
 ![image](./assets/ufcdemo.png)
 
 
-This project leverages machine learning techniques to predict the outcomes of UFC fights.  
-By analyzing fighters' statistics, the model forecasts the likely winner between two competitors. [Website](https://predictufc.netlify.app)
+This project demonstrates an end-to-end ETL pipeline that ingests raw sports data from multiple sources, transforms and validates it, and serves the processed data to downstream analytics and a prediction service. The prediction service leverages machine learning techniques to predict the outcomes of UFC fights.
+
+While the domain is UFC analytics, the focus of the project is on data pipeline design, correctness, and reproducibility, rather than the specific application domain.
+
+The system follows a clear separation between ingestion, transformation, storage, and consumption layers. 
+
+By analyzing fighters' statistics, the model forecasts the likely winner between two competitors.
+
+[Website](https://predictufc.netlify.app)
+
+**NOTE**: The backend is hosted on Render free tier, which puts resources to sleep unless called. If the first prediction you use gives no result, please allow 1-3 minutes and then try again. The application will stay awake after that.
+
+-----------------------------------------------------
+
+## High Level Architecture
+
+```bash
+Raw Data Sources
+    ↓
+Ingestion Layer
+    ↓
+Transformation & Feature Engineering
+    ↓
+Processed Data Storage
+    ↓
+Model Training & Prediction Service
+    ↓
+API + Frontend Consumption
+```
 
 **Models**: Logistics Regression, XGBoost, Random Forest, MLP Neural Network
 
@@ -36,9 +63,9 @@ This model was made from scraping all fights and fighters data current as of Mar
 
 The ETL process involves:
 
-- **Extract**: Data is scraped from relevant UFC statistics websites using the `run_scraper.py` script.​
+- **Extract**: Data is scraped from relevant UFC statistics websites using the `run_scraper.py` script. Basic schema validation is applied (types, missing values)​
 
-- **Transform**: The extracted data undergoes cleaning and preprocessing to ensure consistency and accuracy.​ Some fights had a draw or NC (No Contest) as a result. Winner of these fights were replaced with 'Unknown' variable. Many fights and fighters in the early UFC days had missing statistics. These were handled accordingly. All fight stats were transformed into percentage form with calculations. Stats with time format were transformed into decimal format for calculation.
+- **Transform**: The extracted data undergoes cleaning and preprocessing to ensure consistency and accuracy.​ Some fights had a draw or NC (No Contest) as a result. Winner of these fights were replaced with 'Unknown' variable. Many fights and fighters in the early UFC days had missing statistics. These were handled accordingly. All fight stats were transformed into percentage form with calculations. Stats with time format were transformed into decimal format for calculation. Normalization and deduplication were implemented.
 
 - **Load**: The transformed data is stored in a structured format within the `datasets` directory for further analysis. A data pipeline template with PostgreSQL is provided in the `db` directory.
 
@@ -85,6 +112,17 @@ To optimize the model's performance, a subset of relevant features is selected b
 This process ensures that the model focuses on the most informative attributes.
 
 
+## Operational Considerations
+
+**Reproducibility**: The pipeline can be re-run end-to-end with consistent results
+
+**Data contracts**: Explicit schemas and column expectations are enforced during transformations
+
+**Failure isolation**: Issues in transformation do not corrupt raw data
+
+**Extensibility**: New features or data sources can be added without redesigning the pipeline
+
+
 ## Tech Stacks Used
 
 The project utilizes:
@@ -125,3 +163,17 @@ model accuracy: 70.83%
 model features: striking, takedown and submission stats of two fighters
 
 model was used on UFC Fight Night Emmett vs Murphy main card event, where it successfully predicted all but one match. Ode Osbourne won his match despite being predicted to lose by the model.
+
+
+
+
+### Limitations & Future Improvements
+
+If rebuilding this system today, I would:
+
+- Introduce explicit schema versioning
+
+- Add automated data quality checks and monitoring
+
+- Support streaming ingestion for near–real-time updates
+
